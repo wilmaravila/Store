@@ -1,0 +1,73 @@
+#avatar{
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+   
+    
+}
+#contenido{
+    /* background: linear-gradient(
+          130deg,#000000,#1db6ef
+      );*/
+    /*  --background:linear-gradient(130deg,#008fee,#f8f8f8);*/
+      --background: linear-gradient(0deg,#008fee,#7a049d);
+     
+      
+  }
+ion-label{
+    
+    text-align: center;
+}
+ion-card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.date{
+   
+    display: flex ;
+  }
+
+#edid{
+    font-size: 50px;
+    color:black;
+    position: absolute;
+    margin-left: 90%;
+    margin-bottom: 0;
+}
+.ionCont{
+   
+    align-items: center;
+    height: 100%;
+}
+.imagen-fondo{
+    // background-color: #3b5998;
+    background-color: #037ae9;
+     /* background:radial-gradient(circle, blue,purple
+      );*/
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-align: center;
+      
+  }
+ion-item{
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#card{
+   
+    margin: 10% auto;
+    width: 50%;
+    
+}
+:root {
+    --border-color:lineal-gradient
+    (blue ,red );
+    --card-color:#222;
+
+
+}

@@ -1,0 +1,54 @@
+
+<ion-content id="contenido" [fullscreen]="true">
+  
+    <ion-card id="card">
+     
+      <ion-card-header class="imagen-fondo">
+        <ion-icon (click)="sendEditProfile()" id="edid" name="create"></ion-icon>
+        <ion-avatar id="avatar">
+         <img id="imagenPerfil" alt="Silhouette of mountains" [src]="imagen_perfil" />
+        </ion-avatar>
+        <ion-card-title>{{name}}</ion-card-title>
+    
+      </ion-card-header>
+      <ion-card-content id="information">
+        
+        <ion-list>
+        
+          <ion-item style="text-align: center;">Edad : {{edad}}</ion-item>
+
+          <ion-item >
+            <ion-label class="date">Fecha de nacimiento :    <ion-datetime-button [disabled]="true"  class="buttonDate"  datetime="datetime"></ion-datetime-button>
+  
+              <ion-modal [keepContentsMounted]="true">
+              <ng-template>
+                <ion-datetime [showDefaultButtons]="true"
+                  id="datetime"
+                  presentation="date"
+                  [(ngModel)]="fecha_nacimiento"
+                  [min]="minDate"
+                  [max]="maxDate"
+                 
+                ></ion-datetime>
+              </ng-template>
+            </ion-modal>
+          </ion-label>
+          </ion-item>
+         
+          <ion-item>Email : {{email}}</ion-item>
+         
+          <ion-item>Telefono : {{phone}}</ion-item>
+          
+          <ion-item>Genero : {{genero}}</ion-item>
+         
+          <ion-item>Pais : {{pais}}</ion-item>
+        </ion-list>
+        
+      </ion-card-content>
+  
+    </ion-card>
+    
+   
+  
+ 
+</ion-content>
