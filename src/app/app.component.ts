@@ -13,7 +13,7 @@ export class AppComponent {
   public appPages = [
     { title: 'Information Profiel', url: '/user', icon: 'person' },
     { title: 'Edit Profiel', url: '/edit-user', icon: 'create' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
+    { title: 'Products', url: '/products', icon: 'storefront' },
     { title: 'Archived', url: '/folder/archived', icon: 'archive' },
     { title: 'Trash', url: '/folder/trash', icon: 'airplane' },
     { title: 'Spam', url: '/folder/spam', icon: 'warning' },

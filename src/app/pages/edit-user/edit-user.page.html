@@ -9,7 +9,7 @@
      
     </ion-avatar>
      <!--<ion-button id="botonImagen" (click)="openGallery()">Cambiar imagen</ion-button>--> 
-     <ion-icon name="create-outline" (click)="openGallery()" color="black"></ion-icon>
+     <ion-icon  name="create-outline" (click)="openGallery()" color="black"></ion-icon>
      
    
     </ion-card-header>
@@ -17,14 +17,16 @@
       
       <ion-list >
         <ion-item>
+          <ion-icon name="person-sharp"></ion-icon>
           <ion-input [(ngModel)]="name" type="text" label="Name :"> </ion-input>
         </ion-item>
         <ion-item>
-          
+          <ion-icon name="people"></ion-icon>
           <ion-input label="Age :" type="number" [(ngModel)]="edad"> </ion-input>
         </ion-item>
         <ion-item >
-          <ion-label class="date">Fecha de nacimiento :    <ion-datetime-button  class="buttonDate"  datetime="datetime"></ion-datetime-button>
+          <ion-icon name="calendar"></ion-icon> 
+          <ion-label class="date">Birthday :    <ion-datetime-button  class="buttonDate"  datetime="datetime"></ion-datetime-button>
 
             <ion-modal [keepContentsMounted]="true">
             <ng-template>
@@ -44,15 +46,17 @@
 
         <ion-item>
 
-          
+          <ion-icon name="mail"></ion-icon>
           <ion-input [(ngModel)]="email" type="email" label="Email :"> </ion-input>
         </ion-item>
         
         <ion-item>
+          <ion-icon name="call"></ion-icon>
           <ion-input [(ngModel)]="phone" type="tel" label="Phone"> </ion-input>
         </ion-item>
         
         <ion-item>
+          <ion-icon name="body"></ion-icon>
           <ion-select [(ngModel)]="genero"  justify="start" label="Grender">
             <ion-select-option value="Masculino">Male</ion-select-option>
             <ion-select-option value="Femenino">Female</ion-select-option>
@@ -62,6 +66,7 @@
         </ion-item>
         
         <ion-item >
+          <ion-icon name="earth"></ion-icon>
           <ion-select label="Country" justify="start" [(ngModel)]="pais">
             <ion-select-option  *ngFor="let pais of paises" [value]="pais">
               {{ pais }}
