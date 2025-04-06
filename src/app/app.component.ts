@@ -14,8 +14,8 @@ export class AppComponent {
     { title: 'Information Profiel', url: '/user', icon: 'person' },
     { title: 'Edit Profiel', url: '/edit-user', icon: 'create' },
     { title: 'Products', url: '/products', icon: 'storefront' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'airplane' },
+    { title: 'Shopping', url: '/shopping', icon: 'cart' },
+    { title: 'Register Product', url: '/register-product', icon: 'add-circle' },
     { title: 'Spam', url: '/folder/spam', icon: 'warning' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];

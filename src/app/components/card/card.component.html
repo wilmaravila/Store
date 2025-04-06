@@ -1,0 +1,106 @@
+
+  <div class="productos" *ngIf="allProducts !=undefined; else elseBlock">
+    <ion-card  *ngFor=" let product of allProducts">
+      <ion-card-header class="fond-color">
+        <div class="price">
+          
+          <p>$ {{product.price}}</p>
+        </div>
+        <ion-img [src]="product.image"/>
+      </ion-card-header>
+    
+        
+        <ion-item >
+          
+          <p>{{product.title}}</p>
+          
+        </ion-item>
+        
+        
+        <ion-button (click)="setOpen(true,product.id)" class="buttonEx">more details</ion-button>
+        
+     
+
+      <ion-modal [isOpen]="isModalOpen" >
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title >Producto selecionado</ion-title>
+              <ion-buttons slot="end">
+                <ion-button #myModalClose (click)="setOpen(false,product.id)">Close</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          <ion-content color="ligth" class="contenido-full" >
+
+              <ion-text class="negrilla" id="title">
+             
+                <h1>{{selectProduct?.title}}</h1>
+               
+
+                
+              </ion-text>
+              <div class="imagen-form"> 
+                <ion-img [src]="selectProduct?.image" class="imagen-info"/>
+
+              </div>
+             
+
+              <ion-text class="negrilla" id="price">
+           
+
+                  <h2> $ {{selectProduct?.price}}</h2>
+                
+              </ion-text>
+          <!-- 
+            <ion-text>
+                <h4>{{selectProduct?.rating?.count}}</h4>
+                  <h4>{{selectProduct?.rating?.rate}}</h4>
+              </ion-text>
+              -->
+              <div class="contenedor-selector" *ngIf="shopping == false">
+               
+
+                  
+                  <ion-select  justify="start"  style="width: 40%;"  label="Cantidad" [(ngModel)]="num">
+                    <ion-select-option [value]="num" *ngFor=" let num of listN" >{{num}}</ion-select-option>
+                  </ion-select>
+                  
+                  <div slot="placeholder"><ion-text >Hay mas de 20 unidades</ion-text></div>
+                
+              </div>
+              <ion-text>
+
+                <ion-label>{{selectProduct?.description}}</ion-label>
+              </ion-text>
+              <br>
+        
+              <div clase="compra" id="botones-compra" *ngIf="shopping == false; else elseBlock">
+                
+                <ion-button>Comprar ahora</ion-button>
+                
+                <ion-button (click)="addCart()">Agregar al carrito</ion-button>
+              </div>
+              <ng-template #elseBlock>
+               
+                <div clase="compra" id="botones-compra" >
+                  
+                  <ion-button (click)="delateProduct(selectProduct?.id)" >Delete product</ion-button>
+                  
+                  
+                </div>
+              </ng-template>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+        
+      
+   </ion-card>
+  </div> 
+  <ng-template #elseBlock>
+    <div  class="no-encuentra">
+
+    <h1>No hay productos disponibles</h1>
+  </div>
+  </ng-template>
+

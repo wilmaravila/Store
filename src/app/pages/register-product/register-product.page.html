@@ -1,0 +1,7 @@
+
+<ion-content [fullscreen]="true">
+
+<app-form-product (product)="listSend($event)" [indexId]="sendId"></app-form-product>
+<app-card [allProducts]="listProducts" [shopping]="status" ></app-card>
+
+</ion-content>

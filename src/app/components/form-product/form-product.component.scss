@@ -1,0 +1,68 @@
+ion-card{
+
+    border-radius: 15px;
+    margin: 30px 400px;
+   // background-color: rgba(8, 110, 205, 0.887);
+   background: none;
+
+}
+ion-card{
+    background: white;
+}
+ion-card-header{
+    background: linear-gradient( 90deg,#D5E1FB, #F2F6FF);
+
+    
+}
+
+
+.header-form{
+    display: flex;
+    flex-direction: row;
+}
+ion-title{
+    color: white;
+    font-size: 20pt;
+    font-family: Arial;
+}
+ion-card-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+ion-label{
+    color: white;
+    font-size: 14pt;
+    font-family: Arial;
+}
+ion-input{
+   background: white;
+   border-radius: 5px;
+   margin-top: 15px;
+    
+}
+ion-select{
+    background: white;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+
+
+ion-button{
+    border-radius: 20px;
+    
+    background-color: white;
+    
+    font-size: 14pt;
+    font-family: Arial;
+}
+form{
+    color: black;
+    font-size: 15pt;
+    font-family: Arial;
+}
+ion-button{
+    margin-top: 15px;
+}
