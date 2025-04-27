@@ -25,7 +25,9 @@ export class ProductsPage implements OnInit {
    
 
     ngOnInit() {
-        this.allProducts=this.productService.getProducts()
+      if(this.allProducts!=undefined) {
+         this.allProducts= this.productService.getProducts()
+      }
     }
  
  }
