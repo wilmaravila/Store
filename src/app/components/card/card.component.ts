@@ -33,7 +33,9 @@ export class CardComponent  implements OnInit {
   
      
    }
-   @Output() addProduct = new EventEmitter<Product[]>();
+   @Output() addProduct = new EventEmitter<Product>();
+
+    @Output() produtsShopping = new EventEmitter<Product[]>();
  
    @Input() shopping:boolean=false;
  
@@ -44,7 +46,7 @@ export class CardComponent  implements OnInit {
      console.log(this.selectProduct)
       if(this.selectProduct !== undefined){
         this.listProductsSend.push(this.selectProduct)
-        this.addProduct.emit(this.listProductsSend)
+        this.addProduct.emit(this.selectProduct)
         console.log(this.listProductsSend)
       }
 
@@ -69,6 +71,21 @@ export class CardComponent  implements OnInit {
         }
         
   constructor() { }
+
+  sendShoppingCart(id:number|undefined){
+    console.log(id)
+    if (this.allProducts != undefined) {
+      for (let i of this.allProducts) {
+        if (i.id === id) {
+          console.log("si entra")
+          console.log(i)
+          this.produtsShopping.emit(this.listProductsSend)
+        
+        }
+      }
+    }
+
+  }
 
 
   delateProduct(id:number|undefined){

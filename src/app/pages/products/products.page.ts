@@ -12,25 +12,43 @@ export class ProductsPage implements OnInit {
 
     status:boolean=false;
     
-    listSend(list:Product[]){
-      console.log(list)
-    }
+    statusapi:boolean=false;
+    
   
     
      allProducts:Product[]=[];
   
-    constructor(private productService:ProductsService ) { }
-
- 
-   
-
-    ngOnInit() {
-      if(this.allProducts!=undefined) {
-         this.allProducts= this.productService.getProducts()
+    constructor(private productsService:ProductsService) { 
+     
+      if(this.productsService.statusApi()==false){
+        this.productsService.fieldProducts().subscribe(Response=>{
+          this.productsService.setProductsList(Response)
+          this.allProducts=this.productsService.getAllProducts()
+          console.log(this.statusapi)
+          this.productsService.setStatusApi(true)
+          console.log(this.allProducts)
+          
+        })
       }
+      this.allProducts=this.productsService.getAllProducts()
+      
+      
     }
- 
- }
-                                                                                          
+    
+    
+    
+    
+    ngOnInit() {
+      console.log(this.allProducts)
+      console.log(this.productsService.getProducto()!)
+    }
+  
 
+  
+  listSend(list:Product){
+    console.log(list)
+    this.productsService.setProductsShopping(list)
+    
 
+  }
+}

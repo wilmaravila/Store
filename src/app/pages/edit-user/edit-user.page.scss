@@ -115,3 +115,22 @@ ion-button{
 :root{
     --ion-background-color: #b01fb6;
 }
+@media (max-width: 768px) {
+    #card{
+        width: 90%;
+    }
+    .contenedores{
+        margin-left: 0;
+    }
+    ion-button{
+        margin-left: 0;
+    }
+    #edid{
+        font-size: 30px;
+        margin-left: 80%;
+    }
+    #avatar{
+        width: 70px;
+        height: 70px;
+    }
+}

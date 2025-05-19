@@ -5,7 +5,7 @@
    
     
 }
-#contenido{
+//#contenido{
     /* background: linear-gradient(
           130deg,#000000,#1db6ef
       );*/
@@ -13,7 +13,7 @@
       //--background: linear-gradient(0deg,#008fee,#7a049d);
      
       
-  }
+ // }
 ion-icon{
     padding-right: 30px ;
 }
@@ -73,4 +73,17 @@ ion-item{
     --card-color:#222;
 
 
+}
+@media (max-width: 768px) {
+    #card{
+        width: 90%;
+    }
+    #avatar{
+        width: 80px;
+        height: 80px;
+    }
+    #edid{
+        font-size: 30px;
+        margin-left: 80%;
+    }
 }

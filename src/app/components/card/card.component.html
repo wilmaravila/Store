@@ -1,6 +1,7 @@
 
   <div class="productos" *ngIf="allProducts !=undefined; else elseBlock">
-    <ion-card  *ngFor=" let product of allProducts">
+    <ion-card  size-lg="5"
+    *ngFor=" let product of allProducts">
       <ion-card-header class="fond-color">
         <div class="price">
           
@@ -79,7 +80,7 @@
                 
                 <ion-button>Comprar ahora</ion-button>
                 
-                <ion-button (click)="addCart()">Agregar al carrito</ion-button>
+                <ion-button (click)="addCart() ">Agregar al carrito</ion-button>
               </div>
               <ng-template #elseBlock>
                

@@ -8,21 +8,21 @@
       <p>Fill in the product details to add it to the catalog</p>
     </ion-card-header>
     <ion-card-content>
-      <form action="submit" (ngSubmit)="onSubmit()"   >
+      <form  [formGroup]="formularioRegistro" (ngSubmit)="onSubmit()"   >
 
           
-          <ion-input label="Title prodcut" label-placement="floating" fill="outline"  type="text" name="title" [(ngModel)]="productRegist.title" placeholder="Name producto" required [clearInput]="true"></ion-input>
+          <ion-input formControlName="title" label="Title prodcut" label-placement="floating" fill="outline"  type="text" name="title"  placeholder="Name producto" required [clearInput]="true"></ion-input>
 
-          <ion-input label="Price" label-placement="floating" fill="outline" placeholder="000000" type="number"  name="price" [(ngModel)]="productRegist.price" [max]="5" required ></ion-input>
+          <ion-input formControlName="price" label="Price" label-placement="floating" fill="outline" placeholder="000000" type="number"  name="price" [max]="5" required ></ion-input>
 
           
-          <ion-input label="Image" label-placement="floating" fill="outline" placeholder="Url imagen" type="text" name="image" [(ngModel)]="productRegist.image" required></ion-input>
+          <ion-input formControlName="image" label="Image" label-placement="floating" fill="outline" placeholder="Url imagen" type="text" name="image"  required></ion-input>
           
-          <ion-select label="Category" label-placement="floating" fill="outline" name="category" [(ngModel)]="productRegist.category" placeholder="Select One" required>
+          <ion-select formControlName="category" label="Category" label-placement="floating" fill="outline" name="category" placeholder="Select One" required>
             <ion-select-option *ngFor="let cat of categories" value="{{cat}}">{{cat}}</ion-select-option>
           </ion-select>
 
-          <ion-input id="description" label="Description" label-placement="floating" fill="outline" placeholder="Description product" type="text" name="description" [(ngModel)]="productRegist.description" required></ion-input>
+          <ion-input formControlName="description" id="description" label="Description" label-placement="floating" fill="outline" placeholder="Description product" type="text" name="description"  required></ion-input>
 
          
           
